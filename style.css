@@ -1,0 +1,86 @@
+h1{
+    text-align:center;
+    font-family: 'Tapestry', cursive;
+    font-size:60px;
+    color: red;
+    border:5px double yellow;
+    border-radius:10px;
+    margin:5%;
+    background-color:burlywood;
+}
+
+li{
+    text-align: center;
+    font-family: 'Water Brush', cursive;
+    font-size:40px;
+    font-weight: bold;
+    letter-spacing:3px;
+    color:blueviolet;
+    width:500px;
+    background-color:beige;
+    margin-left:500px;
+    margin-bottom:40px;
+    border:5px solid yellow;
+    border-radius:10px;
+    animation-name:Glow;
+    animation-duration:10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Glow{
+    10%{
+        box-shadow:10px 10px 10px red;
+        text-shadow: 3px 3px 3px violet;
+    }
+
+    20%{
+        box-shadow:10px 10px 10px greenyellow;
+        text-shadow: 3px 3px 3px mediumvioletred;
+    }
+
+    30%{
+        box-shadow:10px 10px 10px rgb(70, 70, 239);
+        text-shadow: 3px 3px 3px lightcoral;
+    }
+
+    40%{
+        box-shadow:10px 10px 10px orange;
+        text-shadow: 3px 3px 3px coral;
+    }
+
+    50%{
+        box-shadow:10px 10px 10px pink;
+        text-shadow: 3px 3px 3px aquamarine;
+    }
+
+    60%{
+        box-shadow:10px 10px 10px aquamarine;
+        text-shadow: 3px 3px 3px pink;
+    }
+
+    70%{
+        box-shadow:10px 10px 10px coral;
+        text-shadow: 3px 3px 3px orange;
+    }
+
+    80%{
+        box-shadow:10px 10px 10px lightcoral;
+        text-shadow: 3px 3px 3px rgb(70, 70, 239);
+    }
+
+    90%{
+        box-shadow:10px 10px 10px mediumvioletred;
+        text-shadow: 3px 3px 3px greenyellow;
+    }
+
+    100%{
+        box-shadow:10px 10px 10px violet;
+        text-shadow: 3px 3px 3px red;
+    }
+}
+
+body{
+    background-image:url(background.jpg);
+    background-size:cover;
+    background-position: 0%;
+}
