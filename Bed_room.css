@@ -1,0 +1,88 @@
+header{
+	position: fixed;
+	top:0;
+	font-size: 40px;
+	color: orangered;
+	font-family: cursive;
+	background-color:lightskyblue;
+	text-align: center;
+	width:100%;
+	border:4px solid yellowgreen;
+	border-radius:20px;
+}
+
+.right{
+	float: right;
+	margin-right: 10px;
+	margin-top:5px;
+}
+
+.center{
+	margin-left:50%;
+	width: fit-content;
+}
+
+canvas{
+	margin-top:-150px;
+    border:5px solid aquamarine;
+	animation-name:Glow;
+    animation-duration:10s;
+    animation-iteration-count: infinite;
+}
+
+body{
+	background-image: url('Bed_room.jpg');
+	background-position: center;
+	background-size: cover;
+
+}
+
+
+@keyframes Glow{
+    10%{
+        box-shadow:10px 10px 10px aquamarine;
+        border:5px solid cornflowerblue;
+    }
+    20%{
+        box-shadow:10px 10px 10px blue;
+        border:5px solid orange;
+    }
+    30%{
+        box-shadow:10px 10px 10px greenyellow;
+        border:5px solid yellow;
+    }
+    40%{
+        box-shadow:10px 10px 10px chartreuse;
+        border:5px solid violet;
+    }
+
+    50%{
+        box-shadow:10px 10px 10px mediumspringgreen;
+        border:5px solid purple;
+    }
+
+    60%{
+        box-shadow:10px 10px 10px purple;
+        border:5px solid mediumspringgreen;
+    }
+
+    70%{
+        box-shadow:10px 10px 10px violet;
+        border:5px solid chartreuse;
+    }
+
+    80%{
+        box-shadow:10px 10px 10px yellow;
+        border:5px solid greenyellow;
+    }
+
+    90%{
+        box-shadow:10px 10px 10px orange;
+        border:5px solid blue;
+    }
+
+    100%{
+        box-shadow:10px 10px 10px cornflowerblue;
+        border:5px solid aquamarine;
+    }
+}
