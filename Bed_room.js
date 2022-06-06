@@ -3,7 +3,7 @@ var status = "";
 var object = [];
 
 function preload(){
-	
+	img = loadImage('bed-design.jpg');
 }
 
 function setup(){
@@ -15,30 +15,27 @@ function setup(){
 
 function draw(){
 	image(img,0,0,700,400);
+	
+    for (i = 0; i < object.length; i++) {
+    	document.getElementById("Status").innerHTML = "Status: Detected Objects";
+        document.getElementById("nameofobject").innerHTML = "NO: " + object.length + " " + object[0].label  + ", " + object[i].label;
 
-		r = random(255);
-        g = random(255);
-        b = random(255);
-        Object_Detector.detect(video, gotresult);
-        for (i = 0; i <= object.length; i++) {
-            document.getElementById("Status").innerHTML = "Status: Detected Objects";
-            document.getElementById("nameofobject").innerHTML = object.lenght;
+        fill("white");
+        noFill();
+        stroke("red");
 
-            fill(r,g,b);
-            noFill();
-            stroke(r,g,b);
+        percent = floor(object[i].confidence * 100);
+        text(object[i].label + " " + percent + "%", object[i].x, object[i].y);
 
-            percent = floor(object[i].confidence * 100);
-            text(object[i].lable + " " + percent + "%", object[i].x, object[i].y);
-
-            rect(object[i].x, object[i].y, object[i].width, object[i].height);
+        rect(object[i].x, object[i].y, object[i].width, object[i].height);
+	}
 }
 
 function modelLoaded(){
-	console.log("The cocossd madel is loaded...");
+	console.log("The cocossd model is loaded...");
 	status = "true";
 	document.getElementById("Status").innerHTML = "Status: Object Detecting...";
-	Object_Detector.detect(image.gotresult);
+	Object_Detector.detect(img,gotresult);
 }
 
 function gotresult(error,results){
